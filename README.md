@@ -185,8 +185,6 @@ caso não tenha sido instalado nos requirements.
 
 Para mais informações sobre este projeto, entre em contato com os autores do TCC.
 
-Líder Técnico: Rafael Henrique Ramos
-
-Front-end e integração: Julio Cesar Bonow Manoel
-
-Documentação e comunicações : Laryssa 
+**Líder técnico:** Rafael Henrique Ramos  
+**Front-end visual:** Julio Cesar Bonow Manoel  
+**Documentação e comunicação:** Laryssa Gabrielly Marquesin
