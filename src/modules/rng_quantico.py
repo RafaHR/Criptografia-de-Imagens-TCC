@@ -1,12 +1,17 @@
 import time
+import os
+from dotenv import load_dotenv
+
 
 import numpy as np
 from qiskit import QuantumCircuit
 from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
 from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
 
-token='qWPCL7dvDujT-yghMPBkROpMpFmK_-HxLaRDDAF-FIPX'
-instance = "crn:v1:bluemix:public:quantum-computing:us-east:a/3355d3654c8e42ec9f98a727b463cf27:b8bc1faa-cf1a-42ff-859c-51c4d32fc1c3::"
+load_dotenv()
+
+token= os.getenv("token")
+instance = os.getenv("instance")
 def gerar_matriz_qrng_real(tamanho=16, job_id=None):
     total_numeros = tamanho * tamanho
     num_bits = 8
@@ -64,5 +69,5 @@ def gerar_matriz_qrng_real(tamanho=16, job_id=None):
 
 # Exemplo de uso:
 # matriz = gerar_matriz_qrng_real(tamanho=16)  # executa na IBM
-# matriz = gerar_matriz_qrng_real(tamanho=16, job_id='d2ceu425v10c73c02epg')  # usa job já rodado
+# matriz = gerar_matriz_qrng_real(tamanho=16, job_id='d2ceu435v10c73c02epg')  # usa job já rodado
 # print(matriz)

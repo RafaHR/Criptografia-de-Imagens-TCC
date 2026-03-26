@@ -11,7 +11,18 @@ O sistema de criptografia de imagens implementado neste projeto utiliza uma comb
 3. **Criptografia Híbrida**: Combina criptografia simétrica (AES) com criptografia assimétrica (Kyber)
 4. **Processamento Vetorizado**: Implementação otimizada para melhor desempenho
 
-## 🏗️ Estrutura do Projeto
+<p align="center">
+  <b>Figura 1 - Pipeline completa.</b>
+</p>
+
+![Figura 1](/imagens_readme/Sistema%20de%20Criptografia%20para%20Imagens.png)
+
+<p align="center">
+  <b>Fonte: Elaborado pelo autor.</b>
+</p>
+
+
+## Estrutura do Projeto
 
 ```
 .
@@ -100,12 +111,68 @@ O projeto inclui diversos scripts de validação:
 
 ## 📚 Tecnologias Utilizadas
 
-- **Python 3.x**
+- **Python 3.12**
 - **OpenCV**: Processamento de imagens
 - **NumPy**: Operações matriciais
 - **Qiskit**: Geração de QRNG quântico
 - **PyCryptodome**: Criptografia simétrica
 - **Matplotlib**: Visualização de resultados
+
+
+## Configuração do ambiente
+
+Este projeto pode ser executado tanto com `venv` quanto com `conda`.
+
+---
+
+## Opção 1: usando `venv`
+
+### Criando o ambiente virtual
+
+No diretório raiz do projeto, execute:
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+## Opção 2: usando Conda
+
+```
+conda create -n nome_do_ambiente python=3.12
+conda activate nome_do_ambiente
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+## Variáveis de Ambiente com '.env'
+
+Para evitar deixar tokens, chaves de API e credenciais expostos no código, o ideal é armazená-los em um arquivo `.env`.
+
+---
+
+## 1. Criando o arquivo `.env`
+
+Na raiz do projeto, crie um arquivo chamado:
+
+```
+.env
+```
+e dentro dele, adicione suas variáveis no formato:
+
+```
+token = "seu token da IBM Quantum"
+instance = "a instância do ambiente que você criou no quantum lab"
+```
+
+para funcionar, instale as biblioteca necessária como
+
+
+```
+pip install python-dotenv
+```
+caso não tenha sido instalado nos requirements.
 
 ## 📝 Notas Importantes
 
@@ -116,4 +183,10 @@ O projeto inclui diversos scripts de validação:
 
 ## 📞 Contato
 
-Para mais informações sobre este projeto, entre em contato com o autor do TCC.
+Para mais informações sobre este projeto, entre em contato com os autores do TCC.
+
+Líder Técnico: Rafael Henrique Ramos
+
+Front-end e integração: Julio Cesar Bonow Manoel
+
+Documentação e comunicações : Laryssa 
